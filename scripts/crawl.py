@@ -21,6 +21,9 @@ from datetime import datetime, timedelta
 import pandas as pd
 from pykrx import stock
 
+# pykrx 로그인 정보 가져오기
+os.environ["KRX_ID"] = os.environ.get("KRX_ID", "")
+os.environ["KRX_PW"] = os.environ.get("KRX_PW", "")
 
 # -----------------------------------------------------------------
 # 설정: 지수 ID -> 추종 ETF 티커 목록 (KRX 6자리 종목코드)
