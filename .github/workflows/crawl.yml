@@ -26,6 +26,9 @@ jobs:
         run: pip install pykrx pandas
 
       - name: ETF 데이터 수집
+        env:
+          KRX_ID: ${{ secrets.KRX_ID }}
+          KRX_PW: ${{ secrets.KRX_PW }}
         run: python scripts/crawl.py
 
       - name: 변경사항 커밋 & 푸시
