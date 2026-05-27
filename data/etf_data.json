@@ -1,0 +1,25 @@
+{
+  "updatedAt": "2026-05-27",
+  "data": {
+    "kospi200": [],
+    "kosdaq150": [],
+    "kr_dividend": [],
+    "kr_gov10y": [],
+    "kr_corp": [],
+    "sp500": [],
+    "nasdaq100": [],
+    "us_dividend": [],
+    "msci_world": [],
+    "msci_em": [],
+    "jp_equity": [],
+    "china_equity": [],
+    "india_equity": [],
+    "us10y": [],
+    "us30y": [],
+    "tips": [],
+    "gold": [],
+    "oil": [],
+    "us_reit": [],
+    "kr_cd": []
+  }
+}
