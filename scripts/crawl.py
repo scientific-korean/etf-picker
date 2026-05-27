@@ -1,6 +1,5 @@
 """
 ETF 데이터 수집 스크립트 - pykrx 1.2.x 호환
-종목명 조회를 우회하고 추적오차 데이터부터 직접 수집합니다.
 """
 
 import json
@@ -13,8 +12,7 @@ from pykrx import stock
 
 
 # -----------------------------------------------------------------
-# 설정: 지수 ID -> { 티커: 종목명 } 매핑
-# 종목명을 직접 하드코딩해서 get_market_ticker_name() 호출을 제거합니다.
+# 설정: 지수 ID -> { 티커: 종목명 }
 # -----------------------------------------------------------------
 INDEX_TICKERS = {
     "kospi200": {
@@ -113,7 +111,7 @@ INDEX_TICKERS = {
 
 
 # -----------------------------------------------------------------
-# 유틸 함수
+# 유틸
 # -----------------------------------------------------------------
 
 def get_recent_business_day(offset=1):
@@ -134,13 +132,48 @@ def safe_col(df, keywords):
     return None
 
 
+def get_aum_and_listing(ticker, end_date):
+    """
+    get_etf_ohlcv_by_date 로 AUM(순자산총액)과 상장일을 가져옵니다.
+    pykrx에서 ETF OHLCV 결과에 '상장시가총액' 또는 'NAV' 컬럼이 포함됩니다.
+    상장일은 전체 기간(2000-01-01~) 조회 후 첫 인덱스로 계산합니다.
+    """
+    aum = 0.0
+    listing_months = 0
+
+    try:
+        # AUM: 당일 기준 ETF 기본 정보
+        df_info = stock.get_etf_ohlcv_by_ticker(end_date)
+        if df_info is not None and isinstance(df_info, pd.DataFrame) and not df_info.empty:
+            print(f"    ETF 전종목 컬럼: {list(df_info.columns)}")
+            if ticker in df_info.index:
+                row = df_info.loc[ticker]
+                aum_col = safe_col(df_info, ["순자산총액", "순자산", "AUM", "시가총액"])
+                if aum_col:
+                    aum = round(float(row[aum_col]) / 1e8, 1)
+                    print(f"    AUM: {aum}억 (컬럼: {aum_col})")
+    except Exception as e:
+        print(f"    AUM 수집 실패: {e}")
+
+    try:
+        # 상장일: 가능한 먼 과거부터 조회해서 첫 거래일 확인
+        df_old = stock.get_etf_ohlcv_by_date("20000101", end_date, ticker)
+        if df_old is not None and isinstance(df_old, pd.DataFrame) and not df_old.empty:
+            first_date = df_old.index.min()
+            listing_months = max(1, int((datetime.now() - pd.Timestamp(first_date)).days / 30))
+            print(f"    상장일: {first_date.date()} -> {listing_months}개월")
+    except Exception as e:
+        print(f"    상장일 수집 실패: {e}")
+
+    return aum, listing_months
+
+
 def fetch_etf_info(ticker, name, start, end):
-    """단일 ETF 티커의 필요 데이터를 수집해 dict 반환. 실패 시 None."""
     try:
         # 추적오차 데이터
         df_te = stock.get_etf_tracking_error(start, end, ticker)
         if df_te is None or not isinstance(df_te, pd.DataFrame) or df_te.empty:
-            print(f"    추적오차 데이터 없음 (shape={getattr(df_te, 'shape', None)})")
+            print(f"    추적오차 데이터 없음")
             return None
 
         print(f"    추적오차 컬럼: {list(df_te.columns)}")
@@ -165,43 +198,22 @@ def fetch_etf_info(ticker, name, start, end):
                 )
                 merged["gap"] = (merged["종가"] - merged[nav_col]) / merged[nav_col] * 100
                 discount_rate = round(float(merged["gap"].mean()), 4)
-                print(f"    괴리율 계산 완료: {discount_rate}%")
-            else:
-                print(f"    괴리율 계산 불가 (nav_col={nav_col}, ohlcv_empty={getattr(ohlcv, 'empty', True)})")
         except Exception as e:
             print(f"    괴리율 계산 실패: {e}")
 
-        # 순자산(AUM) - 억원
-        aum = 0.0
-        try:
-            df_fund = stock.get_etf_portfolio_deposit_file(end, ticker)
-            if df_fund is not None and isinstance(df_fund, pd.DataFrame) and not df_fund.empty:
-                print(f"    AUM 컬럼: {list(df_fund.columns)}")
-                fund_col = safe_col(df_fund, ["순자산", "AUM", "자산"])
-                if fund_col:
-                    aum = round(float(df_fund[fund_col].iloc[0]) / 1e8, 1)
-        except Exception as e:
-            print(f"    AUM 수집 실패: {e}")
-
-        # 일평균 거래대금 - 억원
+        # 일평균 거래대금
         daily_volume = 0.0
         try:
             df_vol = stock.get_etf_trading_volume_and_value(start, end, ticker)
             if df_vol is not None and isinstance(df_vol, pd.DataFrame) and not df_vol.empty:
-                print(f"    거래대금 컬럼: {list(df_vol.columns)}")
-                vol_col = safe_col(df_vol, ["거래대금", "value", "Value", "거래"])
+                vol_col = safe_col(df_vol, ["거래대금", "value", "Value"])
                 if vol_col:
                     daily_volume = round(float(df_vol[vol_col].mean()) / 1e8, 1)
         except Exception as e:
             print(f"    거래대금 수집 실패: {e}")
 
-        # 상장 기간 (개월)
-        listing_months = 0
-        try:
-            first_date = df_te.index.min()
-            listing_months = max(0, int((datetime.now() - pd.Timestamp(first_date)).days / 30))
-        except Exception:
-            pass
+        # AUM + 상장 기간
+        aum, listing_months = get_aum_and_listing(ticker, end)
 
         return {
             "name":          name,
@@ -227,6 +239,18 @@ def main():
     start_date = get_recent_business_day(20)
     print(f"수집 기간: {start_date} ~ {end_date}")
 
+    # ETF 전종목 정보를 1회만 조회해서 재사용 (AUM용)
+    print("\nETF 전종목 기본정보 사전 조회...")
+    etf_all = None
+    try:
+        etf_all = stock.get_etf_ohlcv_by_ticker(end_date)
+        if etf_all is not None and not etf_all.empty:
+            print(f"전종목 조회 완료: {len(etf_all)}개, 컬럼: {list(etf_all.columns)}")
+        else:
+            print("전종목 조회 결과 없음")
+    except Exception as e:
+        print(f"전종목 조회 실패: {e}")
+
     output = {}
 
     for index_id, ticker_map in INDEX_TICKERS.items():
@@ -235,13 +259,80 @@ def main():
 
         for ticker, name in ticker_map.items():
             print(f"  {ticker} ({name}) 수집 중...", flush=True)
-            result = fetch_etf_info(ticker, name, start_date, end_date)
-            if result:
-                print(f"  -> 완료: 추적오차={result['trackingError']} 괴리율={result['discountRate']} AUM={result['aum']}억 거래대금={result['dailyVolume']}억")
+
+            try:
+                # 추적오차
+                df_te = stock.get_etf_tracking_error(start_date, end_date, ticker)
+                if df_te is None or not isinstance(df_te, pd.DataFrame) or df_te.empty:
+                    print(f"    추적오차 없음 -> 건너뜀")
+                    continue
+
+                te_col = safe_col(df_te, ["추적오차", "오차", "TrackingError", "tracking", "Tracking"])
+                tracking_error = round(float(df_te[te_col].abs().mean()), 4) if te_col else 0.0
+
+                # 괴리율
+                discount_rate = 0.0
+                try:
+                    ohlcv = stock.get_etf_ohlcv_by_date(start_date, end_date, ticker)
+                    nav_col = safe_col(df_te, ["NAV", "순자산가치", "기준가", "nav"])
+                    if (nav_col and ohlcv is not None
+                            and isinstance(ohlcv, pd.DataFrame)
+                            and not ohlcv.empty and "종가" in ohlcv.columns):
+                        merged = pd.merge(
+                            ohlcv[["종가"]], df_te[[nav_col]],
+                            left_index=True, right_index=True, how="inner"
+                        )
+                        merged["gap"] = (merged["종가"] - merged[nav_col]) / merged[nav_col] * 100
+                        discount_rate = round(float(merged["gap"].mean()), 4)
+                except Exception as e:
+                    print(f"    괴리율 실패: {e}")
+
+                # 일평균 거래대금
+                daily_volume = 0.0
+                try:
+                    df_vol = stock.get_etf_trading_volume_and_value(start_date, end_date, ticker)
+                    if df_vol is not None and isinstance(df_vol, pd.DataFrame) and not df_vol.empty:
+                        vol_col = safe_col(df_vol, ["거래대금", "value", "Value"])
+                        if vol_col:
+                            daily_volume = round(float(df_vol[vol_col].mean()) / 1e8, 1)
+                except Exception as e:
+                    print(f"    거래대금 실패: {e}")
+
+                # AUM - 전종목 데이터에서 추출
+                aum = 0.0
+                if etf_all is not None and ticker in etf_all.index:
+                    aum_col = safe_col(etf_all, ["순자산총액", "순자산", "AUM", "시가총액"])
+                    if aum_col:
+                        aum = round(float(etf_all.loc[ticker, aum_col]) / 1e8, 1)
+
+                # 상장 기간 - 전체 기간 조회
+                listing_months = 0
+                try:
+                    df_all = stock.get_etf_ohlcv_by_date("20000101", end_date, ticker)
+                    if df_all is not None and isinstance(df_all, pd.DataFrame) and not df_all.empty:
+                        first_date = df_all.index.min()
+                        listing_months = max(1, int(
+                            (datetime.now() - pd.Timestamp(first_date)).days / 30
+                        ))
+                except Exception as e:
+                    print(f"    상장일 실패: {e}")
+
+                result = {
+                    "name":          name,
+                    "ticker":        ticker,
+                    "trackingError": tracking_error,
+                    "discountRate":  discount_rate,
+                    "aum":           aum,
+                    "dailyVolume":   daily_volume,
+                    "listingMonths": listing_months,
+                }
+                print(f"  -> 완료: 추적오차={tracking_error} 괴리율={discount_rate} AUM={aum}억 거래대금={daily_volume}억 상장={listing_months}개월")
                 etf_list.append(result)
-            else:
-                print(f"  -> 건너뜀")
-            time.sleep(0.5)
+
+            except Exception as e:
+                print(f"  -> [오류] {e}")
+
+            time.sleep(0.3)
 
         output[index_id] = etf_list
         print(f"  [{index_id}] {len(etf_list)}개 수집 완료")
