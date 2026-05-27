@@ -9,7 +9,7 @@
         "discountRate": -0.0037,
         "aum": 0.0,
         "dailyVolume": 89143.3,
-        "listingMonths": 0
+        "listingMonths": 287
       },
       {
         "name": "TIGER 200",
@@ -18,7 +18,7 @@
         "discountRate": -0.0165,
         "aum": 0.0,
         "dailyVolume": 23532.5,
-        "listingMonths": 0
+        "listingMonths": 220
       },
       {
         "name": "KODEX 200TR",
@@ -27,7 +27,7 @@
         "discountRate": 0.0123,
         "aum": 0.0,
         "dailyVolume": 2991.6,
-        "listingMonths": 0
+        "listingMonths": 103
       },
       {
         "name": "TIGER 200TR",
@@ -36,7 +36,7 @@
         "discountRate": 0.1322,
         "aum": 0.0,
         "dailyVolume": 175.2,
-        "listingMonths": 0
+        "listingMonths": 104
       }
     ],
     "kosdaq150": [
@@ -47,7 +47,7 @@
         "discountRate": -0.3178,
         "aum": 0.0,
         "dailyVolume": 17473.6,
-        "listingMonths": 0
+        "listingMonths": 129
       }
     ],
     "kr_dividend": [
@@ -58,7 +58,7 @@
         "discountRate": -0.1951,
         "aum": 0.0,
         "dailyVolume": 369.0,
-        "listingMonths": 0
+        "listingMonths": 104
       },
       {
         "name": "KODEX 배당가치",
@@ -67,7 +67,7 @@
         "discountRate": -0.2381,
         "aum": 0.0,
         "dailyVolume": 3.6,
-        "listingMonths": 0
+        "listingMonths": 108
       },
       {
         "name": "KODEX 한국배당가치",
@@ -76,7 +76,7 @@
         "discountRate": 0.0249,
         "aum": 0.0,
         "dailyVolume": 9.4,
-        "listingMonths": 0
+        "listingMonths": 86
       }
     ],
     "kr_gov10y": [
@@ -87,7 +87,7 @@
         "discountRate": 0.0362,
         "aum": 0.0,
         "dailyVolume": 134.4,
-        "listingMonths": 0
+        "listingMonths": 177
       },
       {
         "name": "TIGER 국채3년",
@@ -96,7 +96,7 @@
         "discountRate": 0.0029,
         "aum": 0.0,
         "dailyVolume": 24.2,
-        "listingMonths": 0
+        "listingMonths": 174
       },
       {
         "name": "KODEX 국고채3년",
@@ -105,7 +105,7 @@
         "discountRate": -0.0118,
         "aum": 0.0,
         "dailyVolume": 55.6,
-        "listingMonths": 0
+        "listingMonths": 203
       }
     ],
     "kr_corp": [
@@ -116,7 +116,7 @@
         "discountRate": 0.0061,
         "aum": 0.0,
         "dailyVolume": 11.6,
-        "listingMonths": 0
+        "listingMonths": 184
       }
     ],
     "sp500": [
@@ -127,7 +127,7 @@
         "discountRate": 0.0403,
         "aum": 0.0,
         "dailyVolume": 16808.8,
-        "listingMonths": 0
+        "listingMonths": 70
       },
       {
         "name": "KODEX 미국S&P500TR",
@@ -136,7 +136,7 @@
         "discountRate": 0.0187,
         "aum": 0.0,
         "dailyVolume": 19012.4,
-        "listingMonths": 0
+        "listingMonths": 62
       },
       {
         "name": "ACE 미국S&P500",
@@ -145,7 +145,7 @@
         "discountRate": 0.016,
         "aum": 0.0,
         "dailyVolume": 686.5,
-        "listingMonths": 0
+        "listingMonths": 70
       },
       {
         "name": "SOL 미국S&P500",
@@ -154,7 +154,7 @@
         "discountRate": 0.0143,
         "aum": 0.0,
         "dailyVolume": 483.9,
-        "listingMonths": 0
+        "listingMonths": 42
       },
       {
         "name": "RISE 미국S&P500",
@@ -163,7 +163,7 @@
         "discountRate": 0.0856,
         "aum": 0.0,
         "dailyVolume": 1252.8,
-        "listingMonths": 0
+        "listingMonths": 35
       }
     ],
     "nasdaq100": [
@@ -174,7 +174,7 @@
         "discountRate": 0.0718,
         "aum": 0.0,
         "dailyVolume": 6397.1,
-        "listingMonths": 0
+        "listingMonths": 190
       },
       {
         "name": "KODEX 미국나스닥100TR",
@@ -183,7 +183,7 @@
         "discountRate": 0.0639,
         "aum": 0.0,
         "dailyVolume": 7284.7,
-        "listingMonths": 0
+        "listingMonths": 62
       },
       {
         "name": "ACE 미국나스닥100",
@@ -192,7 +192,7 @@
         "discountRate": 0.0644,
         "aum": 0.0,
         "dailyVolume": 905.1,
-        "listingMonths": 0
+        "listingMonths": 67
       }
     ],
     "us_dividend": [
@@ -203,7 +203,7 @@
         "discountRate": -0.5173,
         "aum": 0.0,
         "dailyVolume": 72.3,
-        "listingMonths": 0
+        "listingMonths": 44
       },
       {
         "name": "ACE 미국배당다우존스",
@@ -212,7 +212,7 @@
         "discountRate": -0.0249,
         "aum": 0.0,
         "dailyVolume": 4934.3,
-        "listingMonths": 0
+        "listingMonths": 32
       },
       {
         "name": "KODEX 미국배당프리미엄액티브",
@@ -221,7 +221,7 @@
         "discountRate": 0.0086,
         "aum": 0.0,
         "dailyVolume": 623.9,
-        "listingMonths": 0
+        "listingMonths": 37
       }
     ],
     "msci_world": [
@@ -232,7 +232,7 @@
         "discountRate": 0.015,
         "aum": 0.0,
         "dailyVolume": 79.2,
-        "listingMonths": 0
+        "listingMonths": 119
       },
       {
         "name": "TIGER 선진국MSCI World",
@@ -241,7 +241,7 @@
         "discountRate": 0.2761,
         "aum": 0.0,
         "dailyVolume": 1744.4,
-        "listingMonths": 0
+        "listingMonths": 59
       }
     ],
     "msci_em": [
@@ -252,7 +252,7 @@
         "discountRate": -0.6642,
         "aum": 0.0,
         "dailyVolume": 7.3,
-        "listingMonths": 0
+        "listingMonths": 147
       },
       {
         "name": "KODEX 신흥국MSCI(합성)",
@@ -261,7 +261,7 @@
         "discountRate": -0.2348,
         "aum": 0.0,
         "dailyVolume": 0.6,
-        "listingMonths": 0
+        "listingMonths": 99
       }
     ],
     "jp_equity": [
@@ -272,7 +272,7 @@
         "discountRate": 0.2103,
         "aum": 0.0,
         "dailyVolume": 75.1,
-        "listingMonths": 0
+        "listingMonths": 123
       },
       {
         "name": "TIGER 일본니케이225",
@@ -281,7 +281,7 @@
         "discountRate": 1.6238,
         "aum": 0.0,
         "dailyVolume": 419.1,
-        "listingMonths": 0
+        "listingMonths": 58
       }
     ],
     "china_equity": [],
@@ -293,7 +293,7 @@
         "discountRate": -0.2239,
         "aum": 0.0,
         "dailyVolume": 97.3,
-        "listingMonths": 0
+        "listingMonths": 37
       },
       {
         "name": "TIGER 인도니프티50",
@@ -302,7 +302,7 @@
         "discountRate": 0.0008,
         "aum": 0.0,
         "dailyVolume": 1080.9,
-        "listingMonths": 0
+        "listingMonths": 31
       }
     ],
     "us10y": [
@@ -313,7 +313,7 @@
         "discountRate": -0.039,
         "aum": 0.0,
         "dailyVolume": 50.5,
-        "listingMonths": 0
+        "listingMonths": 94
       },
       {
         "name": "KODEX 미국채10년선물",
@@ -322,7 +322,7 @@
         "discountRate": -0.0252,
         "aum": 0.0,
         "dailyVolume": 27.2,
-        "listingMonths": 0
+        "listingMonths": 92
       }
     ],
     "us30y": [
@@ -333,7 +333,7 @@
         "discountRate": -0.4049,
         "aum": 0.0,
         "dailyVolume": 27.1,
-        "listingMonths": 0
+        "listingMonths": 93
       },
       {
         "name": "ACE 미국30년국채액티브",
@@ -342,7 +342,7 @@
         "discountRate": -0.0925,
         "aum": 0.0,
         "dailyVolume": 755.4,
-        "listingMonths": 0
+        "listingMonths": 39
       }
     ],
     "tips": [
@@ -353,7 +353,7 @@
         "discountRate": -0.0192,
         "aum": 0.0,
         "dailyVolume": 47.1,
-        "listingMonths": 0
+        "listingMonths": 114
       }
     ],
     "gold": [
@@ -364,7 +364,7 @@
         "discountRate": -0.1165,
         "aum": 0.0,
         "dailyVolume": 141.1,
-        "listingMonths": 0
+        "listingMonths": 190
       },
       {
         "name": "TIGER 골드선물(H)",
@@ -373,7 +373,7 @@
         "discountRate": -0.1288,
         "aum": 0.0,
         "dailyVolume": 34.5,
-        "listingMonths": 0
+        "listingMonths": 86
       },
       {
         "name": "ACE KRX금현물",
@@ -382,7 +382,7 @@
         "discountRate": -0.5371,
         "aum": 0.0,
         "dailyVolume": 1841.3,
-        "listingMonths": 0
+        "listingMonths": 54
       }
     ],
     "oil": [
@@ -393,7 +393,7 @@
         "discountRate": 0.3523,
         "aum": 0.0,
         "dailyVolume": 278.3,
-        "listingMonths": 0
+        "listingMonths": 114
       },
       {
         "name": "KODEX WTI원유선물(H)",
@@ -402,7 +402,7 @@
         "discountRate": 0.0522,
         "aum": 0.0,
         "dailyVolume": 49.7,
-        "listingMonths": 0
+        "listingMonths": 109
       }
     ],
     "us_reit": [
@@ -413,7 +413,7 @@
         "discountRate": -0.8531,
         "aum": 0.0,
         "dailyVolume": 13.0,
-        "listingMonths": 0
+        "listingMonths": 153
       },
       {
         "name": "KODEX 미국부동산리츠(H)",
@@ -422,7 +422,7 @@
         "discountRate": -0.0124,
         "aum": 0.0,
         "dailyVolume": 9.3,
-        "listingMonths": 0
+        "listingMonths": 73
       }
     ],
     "kr_cd": [
@@ -433,7 +433,7 @@
         "discountRate": -0.0688,
         "aum": 0.0,
         "dailyVolume": 2236.2,
-        "listingMonths": 0
+        "listingMonths": 175
       },
       {
         "name": "KODEX CD금리액티브(합성)",
@@ -442,7 +442,7 @@
         "discountRate": 0.0041,
         "aum": 0.0,
         "dailyVolume": 227.6,
-        "listingMonths": 0
+        "listingMonths": 136
       }
     ]
   }
