@@ -26,7 +26,9 @@ jobs:
         env:
           KRX_ID: ${{ secrets.KRX_ID }}
           KRX_PW: ${{ secrets.KRX_PW }}
-        run: python scripts/crawl.py
+        run: |
+          python scripts/diagnose.py
+          python scripts/crawl.py
 
       - name: 변경사항 커밋 & 푸시
         run: |
