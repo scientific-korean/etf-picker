@@ -28,7 +28,7 @@ jobs:
           KRX_PW: ${{ secrets.KRX_PW }}
         run: |
           python scripts/diagnose.py
-          python scripts/crawl.py
+          # python scripts/crawl.py
 
       - name: 변경사항 커밋 & 푸시
         run: |
