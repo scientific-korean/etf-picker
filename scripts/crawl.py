@@ -267,31 +267,37 @@ def safe_col(df, keywords):
 
 def fetch_etf_info(ticker, name, start, end, etf_all):
     try:
-        # 추적오차
-        df_te = stock.get_etf_tracking_error(start, end, ticker)
-        if df_te is None or not isinstance(df_te, pd.DataFrame) or df_te.empty:
-            print(f"    추적오차 없음")
-            return None
+        # OHLCV (괴리율·AUM·상장기간 공통 사용)
+        ohlcv = stock.get_etf_ohlcv_by_date(start, end, ticker)
+        has_ohlcv = (ohlcv is not None
+                     and isinstance(ohlcv, pd.DataFrame)
+                     and not ohlcv.empty)
 
-        te_col = safe_col(df_te, ["추적오차율", "추적오차", "오차"])
-        tracking_error = round(float(df_te[te_col].abs().mean()), 4) if te_col else 0.0
-
-        # 괴리율: (종가 - NAV) / NAV * 100
-        discount_rate = 0.0
+        # 추적오차 (실패해도 건너뛰지 않고 0으로 처리)
+        tracking_error = 0.0
+        discount_rate  = 0.0
+        df_te = None
         try:
-            ohlcv = stock.get_etf_ohlcv_by_date(start, end, ticker)
-            nav_col = safe_col(df_te, ["NAV", "순자산가치", "기준가"])
-            if (nav_col and ohlcv is not None
-                    and isinstance(ohlcv, pd.DataFrame)
-                    and not ohlcv.empty and "종가" in ohlcv.columns):
-                merged = pd.merge(
-                    ohlcv[["종가"]], df_te[[nav_col]],
-                    left_index=True, right_index=True, how="inner"
-                )
-                merged["gap"] = (merged["종가"] - merged[nav_col]) / merged[nav_col] * 100
-                discount_rate = round(float(merged["gap"].mean()), 4)
+            df_te = stock.get_etf_tracking_error(start, end, ticker)
+            if df_te is not None and isinstance(df_te, pd.DataFrame) and not df_te.empty:
+                te_col = safe_col(df_te, ["추적오차율", "추적오차", "오차"])
+                if te_col:
+                    tracking_error = round(float(df_te[te_col].abs().mean()), 4)
+
+                # 괴리율: (종가 - NAV) / NAV * 100
+                nav_col = safe_col(df_te, ["NAV", "순자산가치", "기준가"])
+                if nav_col and has_ohlcv and "종가" in ohlcv.columns:
+                    merged = pd.merge(
+                        ohlcv[["종가"]], df_te[[nav_col]],
+                        left_index=True, right_index=True, how="inner"
+                    )
+                    if not merged.empty:
+                        merged["gap"] = (
+                            (merged["종가"] - merged[nav_col]) / merged[nav_col] * 100
+                        )
+                        discount_rate = round(float(merged["gap"].mean()), 4)
         except Exception as e:
-            print(f"    괴리율 실패: {e}")
+            print(f"    추적오차/괴리율 실패: {e}")
 
         # 일평균 거래대금 (억원)
         daily_volume = 0.0
@@ -304,14 +310,36 @@ def fetch_etf_info(ticker, name, start, end, etf_all):
         except Exception as e:
             print(f"    거래대금 실패: {e}")
 
-        # AUM (억원)
+        # AUM (억원): NAV × 거래량 근사 대신 종가 기준 시가총액으로 추정
+        # etf_all에 순자산 컬럼이 없으므로 → NAV(df_te) × 상장좌수 시도
+        # 상장좌수 = 거래대금 / 거래량 / NAV * 거래량  (불가)
+        # 대안: get_etf_price_change_by_ticker 시도
         aum = 0.0
-        if etf_all is not None and ticker in etf_all.index:
-            aum_col = safe_col(etf_all, ["순자산총액", "순자산", "AUM", "시가총액"])
-            if aum_col:
-                aum = round(float(etf_all.loc[ticker, aum_col]) / 1e8, 1)
+        try:
+            df_pc = stock.get_etf_price_change_by_ticker(end, end)
+            if df_pc is not None and isinstance(df_pc, pd.DataFrame) and not df_pc.empty:
+                if ticker in df_pc.index:
+                    aum_col = safe_col(df_pc, ["순자산총액", "순자산", "AUM"])
+                    if aum_col:
+                        aum = round(float(df_pc.loc[ticker, aum_col]) / 1e8, 1)
+        except Exception:
+            pass
 
-        # 상장 기간 (개월)
+        # AUM 여전히 0이면: NAV × etf_all 거래량으로 시가총액 근사 (최후 수단)
+        if aum == 0.0 and etf_all is not None and ticker in etf_all.index:
+            try:
+                nav_val = float(etf_all.loc[ticker, "NAV"])
+                # 거래량(좌수)이 있으면 유통량 근사 불가 → 종가 기준 시총 사용
+                close_val = float(etf_all.loc[ticker, "종가"])
+                vol_val   = float(etf_all.loc[ticker, "거래량"])
+                # 실제 상장좌수를 모르므로 생략, 다른 컬럼 시도
+                other_col = safe_col(etf_all, ["순자산총액", "순자산", "시가총액", "AUM"])
+                if other_col:
+                    aum = round(float(etf_all.loc[ticker, other_col]) / 1e8, 1)
+            except Exception:
+                pass
+
+        # 상장 기간 (개월): 전체 기간 OHLCV 첫 날짜
         listing_months = 0
         try:
             df_all = stock.get_etf_ohlcv_by_date("20000101", end, ticker)
@@ -358,6 +386,18 @@ def main():
         print(f"전종목 조회 실패: {e}")
 
     output = {}
+
+    # AUM 조회용 price_change 함수 컬럼 확인
+    print("AUM 조회 가능 컬럼 확인...")
+    try:
+        df_pc = stock.get_etf_price_change_by_ticker(end_date, end_date)
+        if df_pc is not None and not df_pc.empty:
+            print(f"  get_etf_price_change_by_ticker 컬럼: {list(df_pc.columns)}")
+        else:
+            print("  get_etf_price_change_by_ticker: 데이터 없음")
+    except Exception as e:
+        print(f"  get_etf_price_change_by_ticker 실패: {e}")
+
     total_count = sum(len(v) for v in INDEX_TICKERS.values())
     print(f"\n총 {len(INDEX_TICKERS)}개 지수, {total_count}개 ETF 수집 시작\n")
 
