@@ -1,104 +1,104 @@
 {
-  "updatedAt": "2026-05-29",
+  "updatedAt": "2026-05-30",
   "data": {
     "kospi200": [
       {
         "name": "KODEX 200",
         "ticker": "069500",
-        "trackingError": 0.4024,
-        "discountRate": -0.0149,
+        "trackingError": 0.38,
+        "discountRate": -0.0275,
         "aum": 0.0,
-        "dailyVolume": 96400.3,
+        "dailyVolume": 101227.2,
         "listingMonths": 287
       },
       {
         "name": "TIGER 200",
         "ticker": "102110",
-        "trackingError": 0.3924,
-        "discountRate": -0.0346,
+        "trackingError": 0.3706,
+        "discountRate": -0.0417,
         "aum": 0.0,
-        "dailyVolume": 23934.8,
+        "dailyVolume": 25396.2,
         "listingMonths": 221
       },
       {
         "name": "KODEX 200TR",
         "ticker": "278530",
-        "trackingError": 0.16,
-        "discountRate": -0.0178,
+        "trackingError": 0.1511,
+        "discountRate": -0.051,
         "aum": 0.0,
-        "dailyVolume": 3144.5,
+        "dailyVolume": 3310.8,
         "listingMonths": 103
       },
       {
         "name": "TIGER 200TR",
         "ticker": "278540",
-        "trackingError": 0.11,
-        "discountRate": 0.094,
+        "trackingError": 0.1039,
+        "discountRate": 0.0906,
         "aum": 0.0,
-        "dailyVolume": 189.3,
+        "dailyVolume": 196.7,
         "listingMonths": 104
       },
       {
         "name": "HANARO 200",
         "ticker": "385720",
-        "trackingError": 9.8188,
-        "discountRate": 0.2337,
+        "trackingError": 9.2733,
+        "discountRate": 0.221,
         "aum": 0.0,
-        "dailyVolume": 615.9,
+        "dailyVolume": 648.3,
         "listingMonths": 61
       },
       {
         "name": "PLUS 200",
         "ticker": "459580",
-        "trackingError": 0.05,
-        "discountRate": 0.0233,
+        "trackingError": 0.0472,
+        "discountRate": 0.0218,
         "aum": 0.0,
-        "dailyVolume": 13045.5,
+        "dailyVolume": 13793.5,
         "listingMonths": 36
       },
       {
         "name": "KIWOOM 200",
         "ticker": "364960",
-        "trackingError": 0.9224,
-        "discountRate": -0.1417,
+        "trackingError": 0.8711,
+        "discountRate": -0.1693,
         "aum": 0.0,
-        "dailyVolume": 32.3,
+        "dailyVolume": 33.8,
         "listingMonths": 68
       },
       {
         "name": "RISE 200",
         "ticker": "251340",
-        "trackingError": 1.44,
-        "discountRate": -0.691,
+        "trackingError": 1.36,
+        "discountRate": -0.7087,
         "aum": 0.0,
-        "dailyVolume": 2860.3,
+        "dailyVolume": 2989.7,
         "listingMonths": 119
       },
       {
         "name": "KOSEF 200",
         "ticker": "152100",
-        "trackingError": 0.4035,
-        "discountRate": -0.1075,
+        "trackingError": 0.3811,
+        "discountRate": -0.1108,
         "aum": 0.0,
-        "dailyVolume": 2307.3,
+        "dailyVolume": 2386.1,
         "listingMonths": 175
       },
       {
         "name": "KBSTAR 200",
         "ticker": "245340",
-        "trackingError": 0.2,
-        "discountRate": -0.0834,
+        "trackingError": 0.1889,
+        "discountRate": -0.0845,
         "aum": 0.0,
-        "dailyVolume": 43.9,
+        "dailyVolume": 46.1,
         "listingMonths": 120
       },
       {
         "name": "ACE 200",
         "ticker": "306520",
-        "trackingError": 1.7124,
-        "discountRate": 0.0323,
+        "trackingError": 1.6172,
+        "discountRate": 0.0594,
         "aum": 0.0,
-        "dailyVolume": 2.2,
+        "dailyVolume": 2.3,
         "listingMonths": 93
       }
     ],
@@ -106,10 +106,10 @@
       {
         "name": "KODEX 코스닥150",
         "ticker": "229200",
-        "trackingError": 0.19,
-        "discountRate": -0.353,
+        "trackingError": 0.1794,
+        "discountRate": -0.3372,
         "aum": 0.0,
-        "dailyVolume": 17465.5,
+        "dailyVolume": 18610.6,
         "listingMonths": 129
       },
       {
@@ -124,28 +124,28 @@
       {
         "name": "ACE 코스닥150",
         "ticker": "368590",
-        "trackingError": 0.1706,
-        "discountRate": 0.0247,
+        "trackingError": 0.1611,
+        "discountRate": 0.028,
         "aum": 0.0,
-        "dailyVolume": 440.3,
+        "dailyVolume": 458.2,
         "listingMonths": 67
       },
       {
         "name": "RISE 코스닥150",
         "ticker": "411060",
-        "trackingError": 0.04,
-        "discountRate": -0.5851,
+        "trackingError": 0.0378,
+        "discountRate": -0.5959,
         "aum": 0.0,
-        "dailyVolume": 1973.9,
+        "dailyVolume": 2083.9,
         "listingMonths": 54
       },
       {
         "name": "HANARO 코스닥150",
         "ticker": "409820",
-        "trackingError": 0.5935,
-        "discountRate": -0.0213,
+        "trackingError": 0.5606,
+        "discountRate": -0.008,
         "aum": 0.0,
-        "dailyVolume": 121.3,
+        "dailyVolume": 128.7,
         "listingMonths": 54
       }
     ],
@@ -153,17 +153,17 @@
       {
         "name": "KODEX 배당성장",
         "ticker": "279530",
-        "trackingError": 2.2318,
-        "discountRate": -0.1699,
+        "trackingError": 2.1078,
+        "discountRate": -0.1638,
         "aum": 0.0,
-        "dailyVolume": 404.0,
+        "dailyVolume": 427.9,
         "listingMonths": 104
       },
       {
         "name": "KODEX 배당가치",
         "ticker": "270800",
-        "trackingError": 1.6106,
-        "discountRate": -0.1527,
+        "trackingError": 1.5211,
+        "discountRate": -0.1215,
         "aum": 0.0,
         "dailyVolume": 3.6,
         "listingMonths": 108
@@ -171,10 +171,10 @@
       {
         "name": "KODEX 한국배당가치",
         "ticker": "322400",
-        "trackingError": 0.6,
-        "discountRate": 0.038,
+        "trackingError": 0.5667,
+        "discountRate": -0.0054,
         "aum": 0.0,
-        "dailyVolume": 9.6,
+        "dailyVolume": 10.1,
         "listingMonths": 86
       },
       {
@@ -189,28 +189,28 @@
       {
         "name": "TIGER 코스피고배당",
         "ticker": "441640",
-        "trackingError": 5.59,
-        "discountRate": -0.021,
+        "trackingError": 5.2794,
+        "discountRate": -0.0317,
         "aum": 0.0,
-        "dailyVolume": 555.0,
+        "dailyVolume": 582.5,
         "listingMonths": 44
       },
       {
         "name": "KBSTAR 200고배당커버드콜ATM",
         "ticker": "266160",
-        "trackingError": 1.0241,
-        "discountRate": 0.0795,
+        "trackingError": 0.9672,
+        "discountRate": 0.0551,
         "aum": 0.0,
-        "dailyVolume": 206.8,
+        "dailyVolume": 212.0,
         "listingMonths": 111
       },
       {
         "name": "SOL 배당다우존스",
         "ticker": "400970",
-        "trackingError": 0.4418,
-        "discountRate": -0.2701,
+        "trackingError": 0.4172,
+        "discountRate": -0.2877,
         "aum": 0.0,
-        "dailyVolume": 28.5,
+        "dailyVolume": 36.0,
         "listingMonths": 56
       },
       {
@@ -225,10 +225,10 @@
       {
         "name": "PLUS 고배당주",
         "ticker": "476760",
-        "trackingError": 2.5365,
-        "discountRate": -0.0614,
+        "trackingError": 2.3956,
+        "discountRate": -0.061,
         "aum": 0.0,
-        "dailyVolume": 187.3,
+        "dailyVolume": 197.1,
         "listingMonths": 26
       }
     ],
@@ -236,37 +236,37 @@
       {
         "name": "KOSEF 국고채10년",
         "ticker": "148070",
-        "trackingError": 0.18,
-        "discountRate": 0.0541,
+        "trackingError": 0.17,
+        "discountRate": 0.0582,
         "aum": 0.0,
-        "dailyVolume": 152.1,
+        "dailyVolume": 154.4,
         "listingMonths": 177
       },
       {
         "name": "TIGER 국채10년",
         "ticker": "305720",
-        "trackingError": 0.3529,
-        "discountRate": -0.0492,
+        "trackingError": 0.3333,
+        "discountRate": -0.0664,
         "aum": 0.0,
-        "dailyVolume": 5872.5,
+        "dailyVolume": 6058.8,
         "listingMonths": 93
       },
       {
         "name": "KODEX 국고채10년",
         "ticker": "352560",
-        "trackingError": 0.8659,
-        "discountRate": 0.0133,
+        "trackingError": 0.8178,
+        "discountRate": 0.011,
         "aum": 0.0,
-        "dailyVolume": 10.5,
+        "dailyVolume": 11.3,
         "listingMonths": 73
       },
       {
         "name": "ACE 국고채10년",
         "ticker": "385590",
-        "trackingError": 5.1659,
-        "discountRate": -0.1554,
+        "trackingError": 4.8789,
+        "discountRate": -0.1693,
         "aum": 0.0,
-        "dailyVolume": 1.8,
+        "dailyVolume": 1.9,
         "listingMonths": 61
       },
       {
@@ -283,46 +283,46 @@
       {
         "name": "TIGER 국채3년",
         "ticker": "152380",
-        "trackingError": 0.11,
-        "discountRate": 0.0247,
+        "trackingError": 0.1039,
+        "discountRate": 0.021,
         "aum": 0.0,
-        "dailyVolume": 36.3,
+        "dailyVolume": 36.5,
         "listingMonths": 174
       },
       {
         "name": "KODEX 국고채3년",
         "ticker": "114820",
-        "trackingError": 0.1988,
-        "discountRate": -0.0072,
+        "trackingError": 0.1878,
+        "discountRate": -0.0076,
         "aum": 0.0,
-        "dailyVolume": 58.2,
-        "listingMonths": 203
+        "dailyVolume": 61.4,
+        "listingMonths": 204
       },
       {
         "name": "KOSEF 국고채3년",
         "ticker": "157450",
-        "trackingError": 0.0576,
-        "discountRate": 0.005,
+        "trackingError": 0.0544,
+        "discountRate": 0.0047,
         "aum": 0.0,
-        "dailyVolume": 315.3,
+        "dailyVolume": 328.1,
         "listingMonths": 170
       },
       {
         "name": "ACE 국고채3년",
         "ticker": "365780",
-        "trackingError": 0.1347,
-        "discountRate": 0.0448,
+        "trackingError": 0.1272,
+        "discountRate": 0.0522,
         "aum": 0.0,
-        "dailyVolume": 56.1,
+        "dailyVolume": 59.1,
         "listingMonths": 68
       },
       {
         "name": "KBSTAR 국고채3년",
         "ticker": "385600",
-        "trackingError": 0.5688,
-        "discountRate": -0.0183,
+        "trackingError": 0.5372,
+        "discountRate": -0.0324,
         "aum": 0.0,
-        "dailyVolume": 26.5,
+        "dailyVolume": 29.3,
         "listingMonths": 61
       }
     ],
@@ -330,10 +330,10 @@
       {
         "name": "KBSTAR 우량회사채",
         "ticker": "136340",
-        "trackingError": 0.16,
-        "discountRate": 0.0138,
+        "trackingError": 0.1511,
+        "discountRate": 0.0113,
         "aum": 0.0,
-        "dailyVolume": 11.0,
+        "dailyVolume": 11.1,
         "listingMonths": 184
       },
       {
@@ -348,10 +348,10 @@
       {
         "name": "TIGER 우량회사채",
         "ticker": "273130",
-        "trackingError": 0.22,
-        "discountRate": 0.0131,
+        "trackingError": 0.2078,
+        "discountRate": 0.0146,
         "aum": 0.0,
-        "dailyVolume": 334.0,
+        "dailyVolume": 341.6,
         "listingMonths": 108
       },
       {
@@ -377,10 +377,10 @@
       {
         "name": "KODEX CD금리액티브(합성)",
         "ticker": "214980",
-        "trackingError": 0.0624,
-        "discountRate": 0.0087,
+        "trackingError": 0.0589,
+        "discountRate": 0.0075,
         "aum": 0.0,
-        "dailyVolume": 243.9,
+        "dailyVolume": 256.3,
         "listingMonths": 136
       },
       {
@@ -395,19 +395,19 @@
       {
         "name": "TIGER CD금리투자KIS(합성)",
         "ticker": "438320",
-        "trackingError": 1.8876,
-        "discountRate": 0.2475,
+        "trackingError": 1.7828,
+        "discountRate": 0.1297,
         "aum": 0.0,
-        "dailyVolume": 23.3,
+        "dailyVolume": 23.9,
         "listingMonths": 45
       },
       {
         "name": "TIGER KOFR금리액티브(합성)",
         "ticker": "449170",
-        "trackingError": 0.03,
-        "discountRate": 0.0126,
+        "trackingError": 0.0283,
+        "discountRate": 0.012,
         "aum": 0.0,
-        "dailyVolume": 496.6,
+        "dailyVolume": 525.9,
         "listingMonths": 42
       },
       {
@@ -451,19 +451,19 @@
       {
         "name": "TIGER 미국S&P500",
         "ticker": "360750",
-        "trackingError": 0.1118,
-        "discountRate": 0.0444,
+        "trackingError": 0.1056,
+        "discountRate": 0.0487,
         "aum": 0.0,
-        "dailyVolume": 17380.7,
+        "dailyVolume": 17930.3,
         "listingMonths": 70
       },
       {
         "name": "KODEX 미국S&P500TR",
         "ticker": "379800",
-        "trackingError": 0.0753,
-        "discountRate": 0.0151,
+        "trackingError": 0.0711,
+        "discountRate": 0.0206,
         "aum": 0.0,
-        "dailyVolume": 19444.8,
+        "dailyVolume": 20268.3,
         "listingMonths": 62
       },
       {
@@ -478,55 +478,55 @@
       {
         "name": "ACE 미국S&P500",
         "ticker": "360200",
-        "trackingError": 0.09,
-        "discountRate": 0.023,
+        "trackingError": 0.085,
+        "discountRate": 0.0297,
         "aum": 0.0,
-        "dailyVolume": 734.2,
+        "dailyVolume": 764.4,
         "listingMonths": 70
       },
       {
         "name": "SOL 미국S&P500",
         "ticker": "449170",
-        "trackingError": 0.03,
-        "discountRate": 0.0126,
+        "trackingError": 0.0283,
+        "discountRate": 0.012,
         "aum": 0.0,
-        "dailyVolume": 496.6,
+        "dailyVolume": 525.9,
         "listingMonths": 42
       },
       {
         "name": "RISE 미국S&P500",
         "ticker": "458730",
-        "trackingError": 0.4965,
-        "discountRate": 0.1402,
+        "trackingError": 0.4689,
+        "discountRate": 0.1328,
         "aum": 0.0,
-        "dailyVolume": 1328.4,
+        "dailyVolume": 1395.8,
         "listingMonths": 35
       },
       {
         "name": "HANARO 미국S&P500",
         "ticker": "469070",
-        "trackingError": 0.9682,
-        "discountRate": 0.0181,
+        "trackingError": 0.9144,
+        "discountRate": 0.0807,
         "aum": 0.0,
-        "dailyVolume": 1078.6,
+        "dailyVolume": 1126.9,
         "listingMonths": 31
       },
       {
         "name": "PLUS 미국S&P500",
         "ticker": "453810",
-        "trackingError": 0.2759,
-        "discountRate": -0.3727,
+        "trackingError": 0.2606,
+        "discountRate": -0.4107,
         "aum": 0.0,
-        "dailyVolume": 98.1,
+        "dailyVolume": 104.8,
         "listingMonths": 37
       },
       {
         "name": "KIWOOM 미국S&P500",
         "ticker": "465330",
-        "trackingError": 0.8788,
-        "discountRate": -0.0052,
+        "trackingError": 0.83,
+        "discountRate": -0.0382,
         "aum": 0.0,
-        "dailyVolume": 272.7,
+        "dailyVolume": 285.9,
         "listingMonths": 33
       },
       {
@@ -552,28 +552,28 @@
       {
         "name": "TIGER 미국나스닥100",
         "ticker": "133690",
-        "trackingError": 0.0841,
-        "discountRate": 0.0454,
+        "trackingError": 0.0794,
+        "discountRate": 0.0505,
         "aum": 0.0,
-        "dailyVolume": 6840.5,
+        "dailyVolume": 7028.8,
         "listingMonths": 190
       },
       {
         "name": "KODEX 미국나스닥100TR",
         "ticker": "379810",
-        "trackingError": 0.0829,
-        "discountRate": 0.0343,
+        "trackingError": 0.0783,
+        "discountRate": 0.0416,
         "aum": 0.0,
-        "dailyVolume": 7448.6,
+        "dailyVolume": 7650.0,
         "listingMonths": 62
       },
       {
         "name": "ACE 미국나스닥100",
         "ticker": "367380",
-        "trackingError": 0.07,
-        "discountRate": 0.0335,
+        "trackingError": 0.0661,
+        "discountRate": 0.0386,
         "aum": 0.0,
-        "dailyVolume": 951.7,
+        "dailyVolume": 1023.5,
         "listingMonths": 67
       },
       {
@@ -588,28 +588,28 @@
       {
         "name": "RISE 미국나스닥100",
         "ticker": "463250",
-        "trackingError": 1.0094,
-        "discountRate": 0.0026,
+        "trackingError": 0.9533,
+        "discountRate": 0.0066,
         "aum": 0.0,
-        "dailyVolume": 1777.0,
+        "dailyVolume": 1879.5,
         "listingMonths": 34
       },
       {
         "name": "HANARO 미국나스닥100",
         "ticker": "468370",
-        "trackingError": 0.9406,
-        "discountRate": 0.06,
+        "trackingError": 0.8883,
+        "discountRate": 0.0685,
         "aum": 0.0,
-        "dailyVolume": 21.8,
+        "dailyVolume": 23.3,
         "listingMonths": 31
       },
       {
         "name": "PLUS 미국나스닥100",
         "ticker": "453820",
-        "trackingError": 3.7641,
-        "discountRate": -0.1299,
+        "trackingError": 3.555,
+        "discountRate": -0.1202,
         "aum": 0.0,
-        "dailyVolume": 5.7,
+        "dailyVolume": 6.1,
         "listingMonths": 37
       },
       {
@@ -635,28 +635,28 @@
       {
         "name": "TIGER 미국배당다우존스",
         "ticker": "441680",
-        "trackingError": 0.2441,
-        "discountRate": -0.4648,
+        "trackingError": 0.2306,
+        "discountRate": -0.4856,
         "aum": 0.0,
-        "dailyVolume": 75.1,
+        "dailyVolume": 77.8,
         "listingMonths": 44
       },
       {
         "name": "ACE 미국배당다우존스",
         "ticker": "466920",
-        "trackingError": 0.69,
-        "discountRate": 0.0235,
+        "trackingError": 0.6517,
+        "discountRate": -0.0125,
         "aum": 0.0,
-        "dailyVolume": 5096.3,
+        "dailyVolume": 5301.0,
         "listingMonths": 32
       },
       {
         "name": "KODEX 미국배당프리미엄액티브",
         "ticker": "455890",
-        "trackingError": 0.04,
-        "discountRate": 0.008,
+        "trackingError": 0.0378,
+        "discountRate": 0.0073,
         "aum": 0.0,
-        "dailyVolume": 609.5,
+        "dailyVolume": 642.3,
         "listingMonths": 37
       },
       {
@@ -680,10 +680,10 @@
       {
         "name": "RISE 미국배당다우존스",
         "ticker": "400970",
-        "trackingError": 0.4418,
-        "discountRate": -0.2701,
+        "trackingError": 0.4172,
+        "discountRate": -0.2877,
         "aum": 0.0,
-        "dailyVolume": 28.5,
+        "dailyVolume": 36.0,
         "listingMonths": 56
       }
     ],
@@ -691,19 +691,19 @@
       {
         "name": "KODEX 선진국MSCI World",
         "ticker": "251350",
-        "trackingError": 1.6176,
-        "discountRate": -0.0029,
+        "trackingError": 1.5278,
+        "discountRate": 0.0127,
         "aum": 0.0,
-        "dailyVolume": 87.8,
+        "dailyVolume": 92.3,
         "listingMonths": 119
       },
       {
         "name": "TIGER 선진국MSCI World",
         "ticker": "390390",
-        "trackingError": 0.1965,
-        "discountRate": 0.2112,
+        "trackingError": 0.1856,
+        "discountRate": 0.2345,
         "aum": 0.0,
-        "dailyVolume": 1926.6,
+        "dailyVolume": 2029.0,
         "listingMonths": 59
       },
       {
@@ -729,19 +729,19 @@
       {
         "name": "TIGER 신흥국MSCI(합성)",
         "ticker": "195930",
-        "trackingError": 0.7394,
-        "discountRate": -0.6824,
+        "trackingError": 0.6983,
+        "discountRate": -0.6833,
         "aum": 0.0,
-        "dailyVolume": 7.4,
+        "dailyVolume": 8.0,
         "listingMonths": 147
       },
       {
         "name": "KODEX 신흥국MSCI(합성)",
         "ticker": "291890",
-        "trackingError": 1.0476,
-        "discountRate": -0.2338,
+        "trackingError": 0.9894,
+        "discountRate": -0.2184,
         "aum": 0.0,
-        "dailyVolume": 0.6,
+        "dailyVolume": 0.7,
         "listingMonths": 99
       },
       {
@@ -758,19 +758,19 @@
       {
         "name": "KODEX 일본TOPIX100",
         "ticker": "241180",
-        "trackingError": 1.8394,
-        "discountRate": 0.3388,
+        "trackingError": 1.7372,
+        "discountRate": 0.3389,
         "aum": 0.0,
-        "dailyVolume": 70.5,
+        "dailyVolume": 103.2,
         "listingMonths": 123
       },
       {
         "name": "TIGER 일본니케이225",
         "ticker": "396520",
-        "trackingError": 1.2529,
-        "discountRate": 1.3909,
+        "trackingError": 1.1833,
+        "discountRate": 1.2519,
         "aum": 0.0,
-        "dailyVolume": 518.7,
+        "dailyVolume": 566.3,
         "listingMonths": 58
       },
       {
@@ -814,19 +814,19 @@
       {
         "name": "KODEX 차이나H",
         "ticker": "168580",
-        "trackingError": 1.5029,
-        "discountRate": -0.1119,
+        "trackingError": 1.4194,
+        "discountRate": -0.1154,
         "aum": 0.0,
-        "dailyVolume": 12.8,
+        "dailyVolume": 13.0,
         "listingMonths": 164
       },
       {
         "name": "ACE 중국본토CSI300",
         "ticker": "371160",
-        "trackingError": 0.41,
-        "discountRate": -0.2399,
+        "trackingError": 0.3872,
+        "discountRate": -0.2464,
         "aum": 0.0,
-        "dailyVolume": 366.4,
+        "dailyVolume": 391.4,
         "listingMonths": 66
       },
       {
@@ -843,19 +843,19 @@
       {
         "name": "KODEX 인도Nifty50",
         "ticker": "453810",
-        "trackingError": 0.2759,
-        "discountRate": -0.3727,
+        "trackingError": 0.2606,
+        "discountRate": -0.4107,
         "aum": 0.0,
-        "dailyVolume": 98.1,
+        "dailyVolume": 104.8,
         "listingMonths": 37
       },
       {
         "name": "TIGER 인도니프티50",
         "ticker": "469070",
-        "trackingError": 0.9682,
-        "discountRate": 0.0181,
+        "trackingError": 0.9144,
+        "discountRate": 0.0807,
         "aum": 0.0,
-        "dailyVolume": 1078.6,
+        "dailyVolume": 1126.9,
         "listingMonths": 31
       },
       {
@@ -870,19 +870,19 @@
       {
         "name": "HANARO 인도니프티50",
         "ticker": "487230",
-        "trackingError": 0.13,
-        "discountRate": 0.252,
+        "trackingError": 0.1228,
+        "discountRate": 0.2254,
         "aum": 0.0,
-        "dailyVolume": 1995.9,
-        "listingMonths": 22
+        "dailyVolume": 2090.6,
+        "listingMonths": 23
       },
       {
         "name": "SOL 인도Nifty50",
         "ticker": "494410",
-        "trackingError": 0.26,
-        "discountRate": -0.0779,
+        "trackingError": 0.2456,
+        "discountRate": -0.0727,
         "aum": 0.0,
-        "dailyVolume": 5.7,
+        "dailyVolume": 5.9,
         "listingMonths": 19
       }
     ],
@@ -890,66 +890,66 @@
       {
         "name": "TIGER 미국채10년선물",
         "ticker": "305080",
-        "trackingError": 0.64,
-        "discountRate": -0.0341,
+        "trackingError": 0.6044,
+        "discountRate": -0.0337,
         "aum": 0.0,
-        "dailyVolume": 51.4,
+        "dailyVolume": 53.6,
         "listingMonths": 94
       },
       {
         "name": "KODEX 미국채10년선물",
         "ticker": "308620",
-        "trackingError": 0.8453,
-        "discountRate": -0.0311,
+        "trackingError": 0.7983,
+        "discountRate": -0.032,
         "aum": 0.0,
-        "dailyVolume": 27.4,
+        "dailyVolume": 28.5,
         "listingMonths": 92
       },
       {
         "name": "ACE 미국채10년선물",
         "ticker": "476750",
-        "trackingError": 4.9094,
-        "discountRate": -0.0577,
+        "trackingError": 4.6367,
+        "discountRate": -0.0579,
         "aum": 0.0,
-        "dailyVolume": 43.0,
+        "dailyVolume": 45.5,
         "listingMonths": 26
       },
       {
         "name": "HANARO 미국채10년선물",
         "ticker": "487240",
-        "trackingError": 0.34,
-        "discountRate": 0.2295,
+        "trackingError": 0.3211,
+        "discountRate": 0.1808,
         "aum": 0.0,
-        "dailyVolume": 18406.6,
-        "listingMonths": 22
+        "dailyVolume": 19240.1,
+        "listingMonths": 23
       }
     ],
     "us30y": [
       {
         "name": "KODEX 미국채울트라30년선물",
         "ticker": "304660",
-        "trackingError": 0.7106,
-        "discountRate": -0.4232,
+        "trackingError": 0.6711,
+        "discountRate": -0.4333,
         "aum": 0.0,
-        "dailyVolume": 26.6,
+        "dailyVolume": 29.7,
         "listingMonths": 93
       },
       {
         "name": "ACE 미국30년국채액티브",
         "ticker": "453850",
-        "trackingError": 2.5653,
-        "discountRate": -0.0943,
+        "trackingError": 2.4228,
+        "discountRate": -0.0959,
         "aum": 0.0,
-        "dailyVolume": 735.2,
+        "dailyVolume": 773.9,
         "listingMonths": 39
       },
       {
         "name": "TIGER 미국30년국채액티브",
         "ticker": "476760",
-        "trackingError": 2.5365,
-        "discountRate": -0.0614,
+        "trackingError": 2.3956,
+        "discountRate": -0.061,
         "aum": 0.0,
-        "dailyVolume": 187.3,
+        "dailyVolume": 197.1,
         "listingMonths": 26
       },
       {
@@ -964,10 +964,10 @@
       {
         "name": "SOL 미국30년국채액티브(H)",
         "ticker": "463050",
-        "trackingError": 16.1276,
-        "discountRate": -0.0345,
+        "trackingError": 15.2317,
+        "discountRate": -0.089,
         "aum": 0.0,
-        "dailyVolume": 416.2,
+        "dailyVolume": 441.1,
         "listingMonths": 33
       }
     ],
@@ -975,10 +975,10 @@
       {
         "name": "TIGER 미국물가연동국채(합성)",
         "ticker": "261240",
-        "trackingError": 0.9118,
-        "discountRate": -0.016,
+        "trackingError": 0.8611,
+        "discountRate": -0.0124,
         "aum": 0.0,
-        "dailyVolume": 47.2,
+        "dailyVolume": 49.4,
         "listingMonths": 114
       },
       {
@@ -1024,28 +1024,28 @@
       {
         "name": "KODEX 골드선물(H)",
         "ticker": "132030",
-        "trackingError": 0.7394,
-        "discountRate": -0.24,
+        "trackingError": 0.6983,
+        "discountRate": -0.2365,
         "aum": 0.0,
-        "dailyVolume": 156.4,
+        "dailyVolume": 162.5,
         "listingMonths": 190
       },
       {
         "name": "TIGER 골드선물(H)",
         "ticker": "319640",
-        "trackingError": 1.4047,
-        "discountRate": -0.2621,
+        "trackingError": 1.3267,
+        "discountRate": -0.2579,
         "aum": 0.0,
-        "dailyVolume": 31.6,
+        "dailyVolume": 34.3,
         "listingMonths": 86
       },
       {
         "name": "ACE KRX금현물",
         "ticker": "411060",
-        "trackingError": 0.04,
-        "discountRate": -0.5851,
+        "trackingError": 0.0378,
+        "discountRate": -0.5959,
         "aum": 0.0,
-        "dailyVolume": 1973.9,
+        "dailyVolume": 2083.9,
         "listingMonths": 54
       },
       {
@@ -1078,10 +1078,10 @@
       {
         "name": "KBSTAR 골드선물(H)",
         "ticker": "394660",
-        "trackingError": 2.1188,
-        "discountRate": -0.8445,
+        "trackingError": 2.0011,
+        "discountRate": -0.8692,
         "aum": 0.0,
-        "dailyVolume": 13.6,
+        "dailyVolume": 14.1,
         "listingMonths": 59
       }
     ],
@@ -1089,28 +1089,28 @@
       {
         "name": "TIGER 원유선물Enhanced(H)",
         "ticker": "261220",
-        "trackingError": 2.5553,
-        "discountRate": 0.2371,
+        "trackingError": 2.4133,
+        "discountRate": 0.2166,
         "aum": 0.0,
-        "dailyVolume": 233.2,
+        "dailyVolume": 244.8,
         "listingMonths": 114
       },
       {
         "name": "KODEX WTI원유선물(H)",
         "ticker": "271060",
-        "trackingError": 0.7718,
-        "discountRate": -0.0157,
+        "trackingError": 0.7289,
+        "discountRate": -0.0237,
         "aum": 0.0,
-        "dailyVolume": 45.0,
+        "dailyVolume": 47.3,
         "listingMonths": 109
       },
       {
         "name": "ACE 원유선물(H)",
         "ticker": "476800",
-        "trackingError": 1.8335,
-        "discountRate": -0.3467,
+        "trackingError": 1.7317,
+        "discountRate": -0.391,
         "aum": 0.0,
-        "dailyVolume": 257.9,
+        "dailyVolume": 268.9,
         "listingMonths": 27
       },
       {
@@ -1127,17 +1127,17 @@
       {
         "name": "TIGER 농산물선물Enhanced(H)",
         "ticker": "139320",
-        "trackingError": 2.4576,
-        "discountRate": -0.3259,
+        "trackingError": 2.3211,
+        "discountRate": -0.3031,
         "aum": 0.0,
-        "dailyVolume": 22.1,
+        "dailyVolume": 23.3,
         "listingMonths": 184
       },
       {
         "name": "ACE 원자재GSCI(합성)",
         "ticker": "475280",
-        "trackingError": 0.08,
-        "discountRate": -0.0348,
+        "trackingError": 0.0756,
+        "discountRate": -0.0363,
         "aum": 0.0,
         "dailyVolume": 1.6,
         "listingMonths": 28
@@ -1156,19 +1156,19 @@
       {
         "name": "TIGER 미국MSCI리츠(합성H)",
         "ticker": "182480",
-        "trackingError": 0.56,
-        "discountRate": -0.9134,
+        "trackingError": 0.5289,
+        "discountRate": -0.9141,
         "aum": 0.0,
-        "dailyVolume": 13.6,
+        "dailyVolume": 14.1,
         "listingMonths": 153
       },
       {
         "name": "KODEX 미국부동산리츠(H)",
         "ticker": "352560",
-        "trackingError": 0.8659,
-        "discountRate": 0.0133,
+        "trackingError": 0.8178,
+        "discountRate": 0.011,
         "aum": 0.0,
-        "dailyVolume": 10.5,
+        "dailyVolume": 11.3,
         "listingMonths": 73
       },
       {
